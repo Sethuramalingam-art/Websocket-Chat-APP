@@ -1,12 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Chat from "./Pages/Chat";
 
 function App() {
   return (
-    <ChakraProvider>
-      <div>Hello</div>
-    </ChakraProvider>
+    <div>
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/chats" Component={Chat} />
+      </Routes>
+    </div>
   );
 }
 
