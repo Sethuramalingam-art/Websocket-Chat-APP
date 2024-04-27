@@ -1,10 +1,11 @@
 const express = require("express");
 const fs = require("fs");
+const cors = require("cors");
 const dotenv = require("dotenv");
 const dataPath = "./data/data.json";
 const app = express();
 dotenv.config();
-
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) => {
   res.send("API is running");
