@@ -5,7 +5,7 @@ import Chat from "./Pages/Chat";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/chats" Component={Chat} />
