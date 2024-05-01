@@ -83,4 +83,4 @@ const allUsers = asyncHandler(async (req, res) => {
   res.send(users);
 });
 
-module.exports = { authUser, registerUser };
+module.exports = { allUsers, authUser, registerUser };
