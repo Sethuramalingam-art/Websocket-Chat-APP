@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 const ChatContext = createContext();
 
 const ChatProvider = ({ children }) => {
+  const [selectedChat, setSelectedChat] = useState();
   const [user, setUser] = useState();
+  const [notification, setNotification] = useState([]);
+  const [chats, setChats] = useState([]);
 
   const navigate = useNavigate();
 
@@ -21,6 +24,12 @@ const ChatProvider = ({ children }) => {
       value={{
         user,
         setUser,
+        chats,
+        setChats,
+        selectedChat,
+        setSelectedChat,
+        notification,
+        setNotification,
       }}
     >
       {children}
