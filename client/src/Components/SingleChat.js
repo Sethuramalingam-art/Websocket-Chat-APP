@@ -6,6 +6,7 @@ import { IconButton, Spinner, useToast } from "@chakra-ui/react";
 import { ChatState } from "../context/ChatProvider";
 import { getSender, getSenderDetails } from "../config/ChatLogic";
 import ProfileModal from "./miscellaneous/ProfileModal";
+import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const { selectedChat, setSelectedChat, user, notification, setNotification } =
@@ -37,7 +38,13 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 />
               </>
             ) : (
-              <>{selectedChat.chatName.toUpperCase()}</>
+              <>
+                {selectedChat.chatName.toUpperCase()}
+                <UpdateGroupChatModal
+                  fetchAgain={fetchAgain}
+                  setFetchAgain={setFetchAgain}
+                />
+              </>
             )}
           </Text>
           <Box
