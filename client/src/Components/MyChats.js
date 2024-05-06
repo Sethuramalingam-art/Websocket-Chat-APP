@@ -6,8 +6,8 @@ import ChatLoading from "./ChatLoading";
 import { Button } from "@chakra-ui/react";
 import { ChatState } from "../context/ChatProvider";
 import { getSender } from "../config/ChatLogic";
-
-const MyChats = ({}) => {
+import GroupChatModal from "./miscellaneous/GroupChatModal";
+const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
   const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
   const toast = useToast();
@@ -36,12 +36,10 @@ const MyChats = ({}) => {
   };
 
   useEffect(() => {
-    console.log(localStorage.getItem("userInfo"));
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
-    console.log(loggedUser);
     fetchChats();
     // eslint-disable-next-line
-  }, []);
+  }, [fetchAgain]);
   return (
     <Box
       display={{ base: selectedChat ? "none" : "flex", md: "flex" }}
@@ -64,15 +62,15 @@ const MyChats = ({}) => {
         alignItems="center"
       >
         My Chats
-        {/* <GroupChatModal> */}
-        <Button
-          display="flex"
-          fontSize={{ base: "17px", md: "10px", lg: "17px" }}
-          rightIcon={<i class="fa fa-plus"></i>}
-        >
-          New Group Chat
-        </Button>
-        {/* </GroupChatModal> */}
+        <GroupChatModal>
+          <Button
+            display="flex"
+            fontSize={{ base: "17px", md: "10px", lg: "17px" }}
+            rightIcon={<i class="fa fa-plus"></i>}
+          >
+            New Group Chat
+          </Button>
+        </GroupChatModal>
       </Box>
       <Box
         display="flex"
