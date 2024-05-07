@@ -187,7 +187,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       //if admin removed from the group he don't need chat details. so setSelected Chat is emptied
       user1._id === user._id ? setSelectedChat() : setSelectedChat(data);
       setFetchAgain(!fetchAgain);
-      //fetchMessages();
+      fetchMessages();
       setLoading(false);
     } catch (error) {
       toast({
