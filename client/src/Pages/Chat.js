@@ -3,7 +3,7 @@ import { useState } from "react";
 import Chatbox from "../Components/ChatBox";
 import MyChats from "../Components/MyChats";
 import SideDrawer from "../Components/miscellaneous/SideDrawer";
-import { ChatState } from "../Context/ChatProvider";
+import { ChatState } from "../context/ChatProvider";
 
 const Chat = () => {
   const { user } = ChatState();

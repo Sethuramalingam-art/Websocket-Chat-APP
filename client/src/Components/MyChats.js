@@ -4,7 +4,7 @@ import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import ChatLoading from "./ChatLoading";
 import { Button } from "@chakra-ui/react";
-import { ChatState } from "../Context/ChatProvider";
+import { ChatState } from "../context/ChatProvider";
 import { getSender } from "../config/ChatLogic";
 import GroupChatModal from "./miscellaneous/GroupChatModal";
 const MyChats = ({ fetchAgain }) => {
