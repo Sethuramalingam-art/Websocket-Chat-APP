@@ -26,7 +26,7 @@ import { useToast } from "@chakra-ui/toast";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { Avatar } from "@chakra-ui/avatar";
 
-import { ChatState } from "../../context/ChatProvider";
+import { ChatState } from "../../Context/ChatProvider";
 import ChatLoading from "../ChatLoading";
 import ProfileModal from "./ProfileModal";
 import UserListItem from "../userAvatar/UserListItem";

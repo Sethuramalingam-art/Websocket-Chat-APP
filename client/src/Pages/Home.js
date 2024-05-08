@@ -11,8 +11,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import Login from "../Components/authentication/Login";
-import Signup from "../Components/authentication/Signup";
+import Login from "../Components/Authentication/Login";
+import Signup from "../Components/Authentication/Signup";
 
 const Home = () => {
   const navigate = useNavigate();

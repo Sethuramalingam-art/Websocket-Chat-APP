@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^13.5.0",
     "add": "^2.0.6",
     "axios": "^1.6.8",
+    "chat-app": "file:..",
     "framer-motion": "^11.1.5",
     "menubar": "^9.4.0",
     "react": "^18.2.0",

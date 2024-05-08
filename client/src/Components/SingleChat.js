@@ -4,7 +4,7 @@ import { FormControl } from "@chakra-ui/form-control";
 import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
 import { IconButton, Spinner, useToast } from "@chakra-ui/react";
-import { ChatState } from "../context/ChatProvider";
+import { ChatState } from "../Context/ChatProvider";
 import { getSender, getSenderDetails } from "../config/ChatLogic";
 import ProfileModal from "./miscellaneous/ProfileModal";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";

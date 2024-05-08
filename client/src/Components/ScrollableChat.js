@@ -1,7 +1,7 @@
 import { Avatar } from "@chakra-ui/avatar";
 import { Tooltip } from "@chakra-ui/tooltip";
 import ScrollableFeed from "react-scrollable-feed";
-import { ChatState } from "../context/ChatProvider";
+import { ChatState } from "../Context/ChatProvider";
 import {
   isLastMessage,
   isSameSender,
