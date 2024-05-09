@@ -17,8 +17,10 @@ import animationData from "../animations/typing.json";
 let ENDPOINT = "";
 
 if (process.env.NODE_ENV === "production") {
+  console.log("prod");
   ENDPOINT = "https://lets-talk-acs2.onrender.com/"; //for production
 } else {
+  console.log("dev");
   ENDPOINT = "http://localhost:5000"; // for development
 }
 var socket, selectedChatCompare;
@@ -60,7 +62,6 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         `/api/message/${selectedChat._id}`,
         config
       );
-      console.log(data);
       setMessages(data);
       setLoading(false);
 
@@ -97,8 +98,6 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           config
         );
         socket.emit("new message", data);
-        console.log(data);
-        console.log(messages);
         setMessages([...messages, data]);
       } catch (error) {
         toast({
