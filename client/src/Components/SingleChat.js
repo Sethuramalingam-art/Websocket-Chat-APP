@@ -16,7 +16,7 @@ import animationData from "../animations/typing.json";
 
 let ENDPOINT = "";
 
-if (process.env.REACT_APP_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
   ENDPOINT = "https://lets-talk-acs2.onrender.com/"; //for production
 } else {
   ENDPOINT = "http://localhost:5000"; // for development
