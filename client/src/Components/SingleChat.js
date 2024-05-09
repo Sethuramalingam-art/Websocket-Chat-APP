@@ -14,7 +14,13 @@ import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
 
-const ENDPOINT = "http://localhost:5000";
+let ENDPOINT = "";
+
+if (process.env.REACT_APP_ENV === "production") {
+  ENDPOINT = "https://lets-talk-acs2.onrender.com/"; //for production
+} else {
+  ENDPOINT = "http://localhost:5000"; // for development
+}
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
